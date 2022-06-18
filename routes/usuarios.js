@@ -16,6 +16,7 @@ const router = Router()
 
 
 router.get('/', usuariosGet)
+
 router.put('/:id', [
     check('id', 'No es un ID valido').isMongoId(),
     check('id').custom(existeUsuarioPorId),
